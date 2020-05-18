@@ -1,0 +1,8 @@
+vendor/
+composer.lock
+.env
+.idea
+.vscode
+Thumbs.db
+composer.phar
+.DS_Store

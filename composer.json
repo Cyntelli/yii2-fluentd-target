@@ -1,0 +1,27 @@
+{
+    "name": "cyntelli/yii2-log-fluentd",
+    "description": "Logging with Fluentd for Yii2",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["yii2", "extension", "log", "log target", "fluentd"],
+    "config": {
+        "process-timeout": 1800
+    },
+    "authors": [
+        {
+            "name": "Lanmor Yang",
+            "email": "lanmor.yang@adgeek.com.tw"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.1.3",
+        "fluent/logger": "v1.0.0",
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "cyntelli\\log\\": "src/"
+        }
+    }
+}
