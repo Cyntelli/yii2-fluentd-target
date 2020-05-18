@@ -34,7 +34,7 @@ return [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             // 'flushInterval' => 1,
             'targets' => [
-                'fluentTarget' => [
+                'fluentdTarget' => [
                     'class' => 'cyntelli\log\FluentdTarget',
                     'levels' => ['error', 'warning'], // Log levels
                     // 'exportInterval' => 1,
