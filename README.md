@@ -1,4 +1,4 @@
-# yii2-fluentd
+# yii2-fluentd-target
 
 Logging with Fluentd for Yii2.
 
