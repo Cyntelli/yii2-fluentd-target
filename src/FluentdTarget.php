@@ -3,7 +3,7 @@
 /**
  * @link https://www.cyntelli.com
  * @copyright Copyright (c) 2020 Cyntelli
- * @license https://github.com/Cyntelli/yii2-fluentd-target/LICENSE
+ * @license https://github.com/Cyntelli/yii2-fluentd-target/blob/master/LICENSE
  */
 
 namespace cyntelli\log;
