@@ -1,5 +1,5 @@
 # yii2-fluentd-target 
-[![Latest Stable Version](https://img.shields.io/packagist/v/cyntelli/yii2-log-fluentd.svg?style=flat-square)](https://packagist.org/packages/cyntelli/yii2-log-fluentd) [![Total Downloads](https://img.shields.io/packagist/dt/cyntelli/yii2-log-fluentd.svg?style=flat-square)](https://packagist.org/packages/graylog2/yii2-log-fluentd) 
+[![Latest Stable Version](https://img.shields.io/packagist/v/cyntelli/yii2-log-fluentd.svg?style=flat-square)](https://packagist.org/packages/cyntelli/yii2-log-fluentd) [![Total Downloads](https://img.shields.io/packagist/dt/cyntelli/yii2-log-fluentd.svg?style=flat-square)](https://packagist.org/packages/cyntelli/yii2-log-fluentd.svg) 
 
 Logging with Fluentd for Yii2.
 
