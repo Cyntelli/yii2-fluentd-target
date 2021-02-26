@@ -17,7 +17,7 @@ use yii\log\Logger;
  * FluentdTarget sends log messages to Fluentd
  
  * @author Lanmor Yang <lanmor.yang@adgeek.com.tw>
- * @version 0.1.0
+ * @version 0.1.1
  */
 class FluentdTarget extends \yii\log\Target
 {
@@ -68,29 +68,36 @@ class FluentdTarget extends \yii\log\Target
             // For string log message set only shortMessage
             if (is_string($text)) {
                 $shortMsg = $text;
-            } elseif ($text instanceof \Exception) {
+            } else {
                 $shortMsg = ('Exception ' . get_class($text) . ': ' . $text->getMessage());
                 $fullMsg = ((string) $text);
                 $line = $text->getLine();
                 $file = $text->getFile();
-            } else {
-                $short = ArrayHelper::remove($text, 'short');
-                $full = ArrayHelper::remove($text, 'full');
-
-                if ($short !== null) {
-                    $shortMsg = $short;
-                    // All remaining message is fullMessage by default
-                    $fullMsg = VarDumper::dumpAsString($text);
-                } else {
-                    // Will use log message as shortMessage by default (no need to add fullMessage in this case)
-                    $shortMsg = VarDumper::dumpAsString($text);
-                }
-                // If 'full' is set will use it as fullMessage (note that all other stuff in log message will not be logged, except 'short' and 'add')
-                if ($full !== null) {
-                    $fullMsg = (VarDumper::dumpAsString($full));
-                }
             }
-       
+
+            // elseif ($text instanceof \Exception) {
+            //     $shortMsg = ('Exception ' . get_class($text) . ': ' . $text->getMessage());
+            //     $fullMsg = ((string) $text);
+            //     $line = $text->getLine();
+            //     $file = $text->getFile();
+            // } else {
+            //     $short = ArrayHelper::remove($text, 'short');
+            //     $full = ArrayHelper::remove($text, 'full');
+
+            //     if ($short !== null) {
+            //         $shortMsg = $short;
+            //         // All remaining message is fullMessage by default
+            //         $fullMsg = VarDumper::dumpAsString($text);
+            //     } else {
+            //         // Will use log message as shortMessage by default (no need to add fullMessage in this case)
+            //         $shortMsg = VarDumper::dumpAsString($text);
+            //     }
+            //     // If 'full' is set will use it as fullMessage (note that all other stuff in log message will not be logged, except 'short' and 'add')
+            //     if ($full !== null) {
+            //         $fullMsg = (VarDumper::dumpAsString($full));
+            //     }
+            // }
+
             if (isset($message[4]) && is_array($message[4])) {
                 $traces = [];
                 foreach ($message[4] as $index => $trace) {
